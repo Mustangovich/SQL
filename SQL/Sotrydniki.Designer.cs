@@ -51,7 +51,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(873, 308);
+            this.button1.Location = new System.Drawing.Point(873, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 61);
             this.button1.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(873, 430);
+            this.button2.Location = new System.Drawing.Point(873, 134);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 67);
             this.button2.TabIndex = 4;
@@ -76,7 +76,7 @@
             "chex",
             "region",
             "Ispitatelnia Laboratoryi"});
-            this.checkedListBox1.Location = new System.Drawing.Point(873, 375);
+            this.checkedListBox1.Location = new System.Drawing.Point(873, 79);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(134, 49);
             this.checkedListBox1.TabIndex = 4;
