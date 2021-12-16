@@ -44,32 +44,35 @@
             // 
             // delButton
             // 
-            this.delButton.Location = new System.Drawing.Point(102, 389);
+            this.delButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delButton.Location = new System.Drawing.Point(74, 389);
             this.delButton.Name = "delButton";
             this.delButton.Size = new System.Drawing.Size(145, 55);
             this.delButton.TabIndex = 17;
             this.delButton.Text = "Удалить Запись";
-            this.delButton.UseVisualStyleBackColor = true;
+            this.delButton.UseVisualStyleBackColor = false;
             this.delButton.Click += new System.EventHandler(this.delButton_Click);
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(199, 328);
+            this.updateButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.updateButton.Location = new System.Drawing.Point(163, 328);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(145, 55);
             this.updateButton.TabIndex = 16;
             this.updateButton.Text = "Изменить Запись";
-            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.addButton.Location = new System.Drawing.Point(12, 328);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(145, 55);
             this.addButton.TabIndex = 15;
             this.addButton.Text = "Добавить Запись";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // comboBox6
@@ -77,7 +80,7 @@
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(12, 193);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(332, 21);
+            this.comboBox6.Size = new System.Drawing.Size(296, 21);
             this.comboBox6.TabIndex = 14;
             // 
             // comboBox3
@@ -85,7 +88,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(12, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(332, 21);
+            this.comboBox3.Size = new System.Drawing.Size(296, 21);
             this.comboBox3.TabIndex = 11;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -94,7 +97,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(12, 12);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(332, 21);
+            this.comboBox2.Size = new System.Drawing.Size(296, 21);
             this.comboBox2.TabIndex = 10;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -103,7 +106,7 @@
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(12, 229);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(332, 21);
+            this.comboBox7.Size = new System.Drawing.Size(296, 21);
             this.comboBox7.TabIndex = 18;
             // 
             // comboBox8
@@ -111,29 +114,40 @@
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(12, 275);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(332, 21);
+            this.comboBox8.Size = new System.Drawing.Size(296, 21);
             this.comboBox8.TabIndex = 19;
             // 
             // comboBox4
             // 
             this.comboBox4.Location = new System.Drawing.Point(12, 96);
+            this.comboBox4.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(332, 20);
+            this.comboBox4.Size = new System.Drawing.Size(296, 20);
             this.comboBox4.TabIndex = 20;
             this.comboBox4.ValueChanged += new System.EventHandler(this.comboBox4_ValueChanged);
             // 
             // comboBox5
             // 
             this.comboBox5.Location = new System.Drawing.Point(12, 149);
+            this.comboBox5.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(332, 20);
+            this.comboBox5.Size = new System.Drawing.Size(296, 20);
             this.comboBox5.TabIndex = 21;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 449);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(320, 449);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox8);

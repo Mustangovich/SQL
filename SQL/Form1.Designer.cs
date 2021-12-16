@@ -83,7 +83,7 @@
             this.region.Name = "region";
             this.region.Size = new System.Drawing.Size(184, 81);
             this.region.TabIndex = 14;
-            this.region.Text = "Регион";
+            this.region.Text = "Участок";
             this.region.UseVisualStyleBackColor = false;
             this.region.Click += new System.EventHandler(this.region_Click);
             // 
@@ -191,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1026, 413);
+            this.ClientSize = new System.Drawing.Size(1049, 413);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button9);

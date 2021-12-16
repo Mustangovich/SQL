@@ -107,6 +107,18 @@
     <Compile Include="Chex.Designer.cs">
       <DependentUpon>Chex.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChexForm.Designer.cs">
+      <DependentUpon>ChexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chickl Raboty Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chickl Raboty Form.Designer.cs">
+      <DependentUpon>Chickl Raboty Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chikl Raboti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,17 +143,41 @@
     <Compile Include="Ispitania.Designer.cs">
       <DependentUpon>Ispitania.cs</DependentUpon>
     </Compile>
+    <Compile Include="IspitanieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IspitanieForm.Designer.cs">
+      <DependentUpon>IspitanieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ispitatelinia laboratoria Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ispitatelinia laboratoria Form.Designer.cs">
+      <DependentUpon>Ispitatelinia laboratoria Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ispitatelinia laboratoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ispitatelinia laboratoria.Designer.cs">
       <DependentUpon>Ispitatelinia laboratoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Izdelia Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izdelia Form.Designer.cs">
+      <DependentUpon>Izdelia Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Izdelia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Izdelia.Designer.cs">
       <DependentUpon>Izdelia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oborydovanie Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oborydovanie Form.Designer.cs">
+      <DependentUpon>Oborydovanie Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Oborydovanie.cs">
       <SubType>Form</SubType>
@@ -151,11 +187,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Region Form.Designer.cs">
+      <DependentUpon>Region Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Region.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Region.Designer.cs">
       <DependentUpon>Region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sborka Izdelia Forn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sborka Izdelia Forn.Designer.cs">
+      <DependentUpon>Sborka Izdelia Forn.cs</DependentUpon>
     </Compile>
     <Compile Include="Sborka Izdelia.cs">
       <SubType>Form</SubType>
@@ -169,11 +217,23 @@
     <Compile Include="Sotrydniki.Designer.cs">
       <DependentUpon>Sotrydniki.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tip Ispitania Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tip Ispitania Form.Designer.cs">
+      <DependentUpon>Tip Ispitania Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tip Ispitania.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tip Ispitania.Designer.cs">
       <DependentUpon>Tip Ispitania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tip Izdelia Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tip Izdelia Form.Designer.cs">
+      <DependentUpon>Tip Izdelia Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Tip Izdelia.cs">
       <SubType>Form</SubType>
@@ -187,11 +247,47 @@
     <EmbeddedResource Include="BrigadeForm.resx">
       <DependentUpon>BrigadeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chex.resx">
+      <DependentUpon>Chex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChexForm.resx">
+      <DependentUpon>ChexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chickl Raboty Form.resx">
+      <DependentUpon>Chickl Raboty Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chikl Raboti.resx">
+      <DependentUpon>Chikl Raboti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ispitania.resx">
+      <DependentUpon>Ispitania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IspitanieForm.resx">
+      <DependentUpon>IspitanieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ispitatelinia laboratoria Form.resx">
+      <DependentUpon>Ispitatelinia laboratoria Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ispitatelinia laboratoria.resx">
+      <DependentUpon>Ispitatelinia laboratoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izdelia Form.resx">
+      <DependentUpon>Izdelia Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izdelia.resx">
+      <DependentUpon>Izdelia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oborydovanie Form.resx">
+      <DependentUpon>Oborydovanie Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oborydovanie.resx">
+      <DependentUpon>Oborydovanie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -202,8 +298,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Region Form.resx">
+      <DependentUpon>Region Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Region.resx">
+      <DependentUpon>Region.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sborka Izdelia Forn.resx">
+      <DependentUpon>Sborka Izdelia Forn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sborka Izdelia.resx">
+      <DependentUpon>Sborka Izdelia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sotrydniki.resx">
       <DependentUpon>Sotrydniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tip Ispitania Form.resx">
+      <DependentUpon>Tip Ispitania Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tip Ispitania.resx">
+      <DependentUpon>Tip Ispitania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tip Izdelia Form.resx">
+      <DependentUpon>Tip Izdelia Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tip Izdelia.resx">
+      <DependentUpon>Tip Izdelia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -17,7 +17,13 @@ namespace SQL
         {
             InitializeComponent();
             LoadCombobox();
+        }
+        public BrigadeForm(int _id)
+        {
+            InitializeComponent();
+            LoadCombobox();
             LoadString();
+            id = _id;
         }
         int id;
         private void LoadString()
@@ -28,7 +34,6 @@ namespace SQL
                 ("Select * from brigade where id_brigade=" + id, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
         }
 
         private void LoadCombobox()
@@ -83,12 +88,11 @@ namespace SQL
         private void addButton_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection
-("Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
+                ("Server=127.0.0.1;Database=soul;Uid=Tost;Pwd=123;SslMode=none");
             MySqlDataAdapter da = new MySqlDataAdapter
-                 ("INSERT INTO brigade (brigadier, number_of_teams, number_of_employees, id_staff, Chief ) " +
-                " values ('" + comboBox1.Text + "', '" + comboBox2.Value.ToString().Replace(",", ".") +
-                "'" + comboBox3.Value.ToString().Replace(",", ".")
-                + "', '" + comboBox4.SelectedValue + "', " +
+                ("INSERT INTO brigade (brigadier, number_of_teams, number_of_employees, id_staff, Chief ) " +
+                " VALUES ('" + comboBox1.Text + "', '" + comboBox2.Value.ToString().Replace(",", ".") + "', " +
+                "'" + comboBox3.Value.ToString().Replace(",", ".") + "', '" + comboBox4.SelectedValue + "', " +
                 "'" + comboBox5.Text + "')", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -98,15 +102,15 @@ namespace SQL
         private void updateButton_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection
-           (@"Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
+                       (@"Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
             MySqlDataAdapter da = new MySqlDataAdapter
                 ($@" update brigade set 
                     brigadier='{comboBox1.Text}',
-                    number_of_teams='{comboBox2.Value.ToString().Replace(",", ".")}'',
+                    number_of_teams='{comboBox2.Value.ToString().Replace(",", ".")}',
                     number_of_employees='{comboBox3.Value.ToString().Replace(",", ".")}',
                     id_staff='{comboBox4.SelectedValue}',
-                    Chief='{comboBox5.Text}', '
-                    Where id_brigade='{id}'", con);
+                    Chief='{comboBox5.Text}'
+                    Where id_brigade={id}", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Close();
@@ -115,9 +119,9 @@ namespace SQL
         private void delButton_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection
-(@"Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
+           (@"Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
             MySqlDataAdapter da = new MySqlDataAdapter
-                ($@" Delete From brigade 
+                ($@"Delete From brigade 
                     Where id_brigade={id}", con);
             DataTable dt = new DataTable();
             da.Fill(dt);

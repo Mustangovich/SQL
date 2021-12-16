@@ -82,39 +82,43 @@
             // 
             // delButton
             // 
-            this.delButton.Location = new System.Drawing.Point(102, 352);
+            this.delButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delButton.Location = new System.Drawing.Point(102, 295);
             this.delButton.Name = "delButton";
             this.delButton.Size = new System.Drawing.Size(145, 55);
             this.delButton.TabIndex = 29;
             this.delButton.Text = "Удалить Запись";
-            this.delButton.UseVisualStyleBackColor = true;
+            this.delButton.UseVisualStyleBackColor = false;
             this.delButton.Click += new System.EventHandler(this.delButton_Click);
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(199, 291);
+            this.updateButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.updateButton.Location = new System.Drawing.Point(199, 234);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(145, 55);
             this.updateButton.TabIndex = 28;
             this.updateButton.Text = "Изменить Запись";
-            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 291);
+            this.addButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addButton.Location = new System.Drawing.Point(12, 234);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(145, 55);
             this.addButton.TabIndex = 27;
             this.addButton.Text = "Добавить Запись";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // BrigadeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 413);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(362, 366);
             this.Controls.Add(this.delButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.addButton);

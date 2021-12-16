@@ -28,6 +28,7 @@ namespace SQL
             id = _id;
         }
 
+
         private void LoadString()
         {
             MySqlConnection con = new MySqlConnection
@@ -36,7 +37,6 @@ namespace SQL
                 ("Select * from staff where id_staff=" + id, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
         }
 
         private void LoadCombobox()
@@ -105,16 +105,9 @@ namespace SQL
             comboBox8.DataSource = dt;
             comboBox8.DisplayMember = "Masters";
             comboBox8.ValueMember = "Masters";
-
-
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -126,10 +119,8 @@ namespace SQL
             MySqlDataAdapter da = new MySqlDataAdapter
                  ("INSERT INTO staff (worker, FCS, work_experience, discharge, education, category_employees, Masters ) " +
                 " values ('" + comboBox2.Text + "', '" + comboBox3.Text + "', " +
-                "'" + comboBox4.Value.ToString().Replace(",", ".")
-                + "', '" + comboBox5.Value.ToString().Replace(",", ".") + "', " +
-                "'" + comboBox6.Text + "','" + comboBox7.Text + "'," +
-                "'" + comboBox8.Text + "')", con);
+                "'" + comboBox4.Text + "', '" + comboBox5.Text + "', " +
+                "'" + comboBox6.Text + "','" + comboBox7.Text + "'," + "'" + comboBox8.Text + "')", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Close();

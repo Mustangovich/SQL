@@ -17,11 +17,11 @@ namespace SQL
         public Sotrydniki()
         {
             InitializeComponent();
-            query = _query;
             LoadTable();
             LoadCombobox();
+            dataGridView1.ReadOnly = true;
         }
-
+       
         private void LoadCombobox()
         {
             MySqlConnection con = new MySqlConnection
@@ -30,29 +30,11 @@ namespace SQL
                 ("Select * from staff", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            // worker
-            MySqlConnection con1 = new MySqlConnection
-("Server=127.0.0.1;Database=soul;Uid=Tost;Pwd=123;SslMode=none");
-            MySqlDataAdapter da1 = new MySqlDataAdapter
-                ("Select * from staff", con1);
-            DataTable dt1 = new DataTable();
-            da1.Fill(dt1);
-            comboBox1.DataSource = dt1;
-            comboBox1.DisplayMember = "worker";
-            comboBox1.ValueMember = "worker";
-            comboBox1.SelectedIndex = -1;
-            comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
 
-        void ComboBoxSelectedIndexChanged(object sender,EventArgs e)
-        {
-             
-        }
 
-        string query;
-        const string _query = "SELECT staff.worker, staff.FCS, staff.work_experience, " +
-            "staff.discharge, staff.education, staff.category_employees, staff.Masters " +
+        string query = "SELECT id_staff AS Персонал, worker AS Отдел, FCS AS ФИО, work_experience AS Опыт_Работы, " +
+            "discharge AS Разряд, education AS Образование, category_employees AS Работает, Masters AS Мастер " +
             "from staff ";
 
 
@@ -61,9 +43,7 @@ namespace SQL
             MySqlConnection con = new MySqlConnection
                 ("Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
             MySqlDataAdapter da = new MySqlDataAdapter
-                ("SELECT staff.worker, staff.FCS, staff.work_experience, " +
-            "staff.discharge, staff.education, staff.category_employees, staff.Masters " +
-            "from staff", con);
+                (query, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -98,31 +78,43 @@ namespace SQL
             }
         }
 
-        private void Filter_CheckedChanged(object sender, EventArgs e)
+
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Filter.Checked)
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string checkBox = "";
+
+            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
             {
+                if (checkBox == "")
+                {
+                    checkBox = "'" + checkedListBox1.CheckedItems[i].ToString() + "'";
+
+                }
+                else
+                {
+
+                    checkBox += ", " + "'" + checkedListBox1.CheckedItems[i].ToString() + "'";
+                }
+
+                MySqlConnection sqlConnection = new MySqlConnection
+                ("Server=127.0.0.1;Database=soul;charset=utf8;Uid=Tost;Pwd=123;SslMode=none");
+                string query = @"SELECT id_staff AS Персонал, worker AS Отдел, FCS AS ФИО, work_experience AS Опыт_Работы, " +
+            "discharge AS Разряд, education AS Образование, category_employees AS Работает, Masters AS Мастер " +
+            "from staff WHERE worker IN (" + checkBox + ")";
+                MySqlCommand sqlCommand = new MySqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand); ;
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+                sqlConnection.Close();
             }
-            else
-            {
-                comboBox1.SelectedIndex = -1;
-                comboBox2.SelectedIndex = -1;
-                comboBox3.SelectedIndex = -1;
-            }
-            panel1.Visible = Filter.Checked;
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }
